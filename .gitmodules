@@ -1,0 +1,4 @@
+[submodule "dobby/src/main/dobby"]
+	path = dobby/src/main/dobby
+	url = https://github.com/LSPosed/Dobby.git
+	branch = maven
