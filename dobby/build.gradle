@@ -11,15 +11,15 @@ android {
     defaultConfig {
         minSdk 16
         targetSdk 30
-        versionCode 2
-        versionName '1.1'
+        versionCode 3
+        versionName '1.2'
         externalNativeBuild {
             cmake {
                 arguments "-DCMAKE_BUILD_TYPE=Release", "-DDOBBY_GENERATE_SHARED=OFF",
                         "-DDOBBY_DEBUG=OFF", "-DPlugin.Android.BionicLinkerRestriction=ON",
                         "-DANDROID_STL=none", "-DVERSION_REVISION=${defaultConfig.versionCode}",
                         "-DCMAKE_C_FLAGS_RELEASE=-Oz", "-DCMAKE_CXX_FLAGS_RELEASE=-Oz"
-                cFlags "-fno-rtti", "-fno-exceptions", "-Wno-builtin-macro-redefined", "-D__FILE__=__FILE_NAME__"
+                cFlags "-Wno-builtin-macro-redefined", "-D__FILE__=__FILE_NAME__"
             }
         }
     }
